@@ -24,7 +24,7 @@ def writeToFile(h, d):
     for i in range(d):
         if h[2 * i] == 1:
             output_string += str("X") + str(i + 1) + ","
-        elif h[2 * i + 1] == 1:
+        if h[2 * i + 1] == 1:
             output_string += "not(" + str("X") + str(i + 1) + ")" + ","
     output_string = output_string.strip(",")
     file.writelines(output_string)
